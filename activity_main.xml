@@ -4,27 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+
+    <Button
+        android:id="@+id/buttonAccueil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/libTitle"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="195dp" />
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/buttonAccueil" />
+
+    <Button
+        android:id="@+id/buttonRetour"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="-3dp"
+        android:layout_toLeftOf="@id/buttonAccueil"
+        android:text="@string/buttonRetour" />
+
+    <Button
+        android:id="@+id/buttonDeconnexion"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="-2dp"
+        android:layout_toRightOf="@id/buttonAccueil"
+        android:text="@string/buttonDeconnexion" />
+
+    <TextView
+        android:id="@+id/libTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAccueil"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="70dp"
+        android:text="@string/lib" />
 
     <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="match_parent"
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
-        android:layout_marginTop="166dp"
+        android:layout_below="@id/idUser"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="42dp"
         android:ems="10"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="242dp" />
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/idUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/libTitle"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="29dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="idUser" />
+
+    <Button
+        android:id="@+id/buttonConnexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="1dp"
+        android:text="@string/connexion" />
 
 </RelativeLayout>
